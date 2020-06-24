@@ -1,0 +1,72 @@
+
+<app-main-nav></app-main-nav>
+<body>
+<div class="container">
+    <div>
+      <h2>NGO List</h2>
+      <br>
+      <br>
+      <!-- <table  width="100%"  >
+      <tr>
+      <td width="33%">
+          <img src="assets/images/ngo.png" style="width:100px;"/>
+  <h3 style="size:4px">NGO</h3>
+  <p style="size:4px">Aahaar Helpers</p>
+  <input type="submit" value="View">
+      </td>
+  <td width="33%">
+      <img src="assets/images/ngo.png" style="width:100px" />
+      <br>
+  <h3 style="size:4px">GROUP</h3>
+  <p style="size:4px">Aahaar Helpers</p>
+  <input type="submit" value="View">
+      </td>
+      
+  <td width="33%"><img src="assets/images/ngo.png" style="width:100px;"/>
+      <br>
+  <h3 style="size:4px">USER</h3>
+  <p style="size:4px">Aahaar Suppoters</p>
+  <input type="submit" value="View">
+      </td>
+      
+  
+      </tr>
+      </table> -->
+
+<table width =70% height=80% style="border:1px;">
+      <tr *ngFor="let m of result">
+        <td>{{m.ngoid}}</td>
+        <td>{{m.NGO_Name}}</td>
+        <td>{{m.ngo_Address}}</td>
+        <td>{{m.NGO_Motive}}</td>
+        <td>{{m.NGO_Time}}</td>
+        <td>{{m.NGO_Contact}}</td>
+         <td>{{m.Working_Since}}</td>
+         <td>
+            <button (click)="delete(m.ngoid)" class="btn btn-danger">Delete</button>
+         </td>
+      </tr><br>
+      <tr style="text-align: center">
+        <td>
+                      </td>
+        <td></td>
+        <td></td><td></td>
+          <td>
+            <input type="submit" value="Add ngo"routerLink="/ngo-form"  >
+          </td>
+      
+          <td>
+              <input type="submit" value="Logout"routerLink="/home"  >
+          </td>
+      </tr>
+    </table>
+   </div>
+    </div>
+</body>
+<pre>
+
+
+
+
+</pre>
+<app-app-footer></app-app-footer>
